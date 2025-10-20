@@ -1,0 +1,157 @@
+.stacks-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.stacks-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #060010 0%, #0a0015 100%);
+  
+  /* Animated gradient border */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: 30px;
+    background: linear-gradient(
+      45deg,
+      #8b5cf6,
+      #a855f7,
+      #ec4899,
+      #8b5cf6,
+      #a855f7
+    );
+    background-size: 400% 400%;
+    animation: gradientFlow 8s ease-in-out infinite;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Glow effect */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 30px;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(139, 92, 246, 0.3),
+      transparent,
+      rgba(168, 85, 247, 0.3),
+      transparent
+    );
+    background-size: 400% 400%;
+    animation: gradientFlow 8s ease-in-out infinite;
+    filter: blur(15px);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Content wrapper */
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .stacks-wrapper {
+    padding: 1.5rem;
+  }
+
+  .stacks-container {
+    padding: 2rem;
+    border-radius: 25px;
+
+    &::before {
+      padding: 2px;
+      border-radius: 25px;
+    }
+
+    &::after {
+      border-radius: 25px;
+      filter: blur(12px);
+    }
+  }
+}
+
+/* Mobile responsiveness (max 768px) */
+@media (max-width: 768px) {
+  .stacks-wrapper {
+    padding: 1rem;
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .stacks-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+
+    &::before {
+      padding: 2px;
+      border-radius: 20px;
+      animation-duration: 6s;
+    }
+
+    &::after {
+      border-radius: 20px;
+      filter: blur(10px);
+      opacity: 0.5;
+      animation-duration: 6s;
+    }
+  }
+}
+
+/* Small mobile (max 480px) */
+@media (max-width: 480px) {
+  .stacks-wrapper {
+    padding: 0.75rem;
+  }
+
+  .stacks-container {
+    padding: 1rem;
+    border-radius: 15px;
+
+    &::before {
+      padding: 2px;
+      border-radius: 15px;
+    }
+
+    &::after {
+      border-radius: 15px;
+      filter: blur(8px);
+    }
+  }
+}
