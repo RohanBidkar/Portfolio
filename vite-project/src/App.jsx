@@ -6,6 +6,7 @@ import Scroll from './components/stacksintro'
 import LaserFlowBoxExample from './components/lazerFlow'
 import ProjectIntro from './components/projectIntro'
 import Projects from './components/projects'
+import Certificates from './components/certificates'
 import Contact from './components/contact'
 
 
@@ -17,6 +18,7 @@ function App() {
      <Hero/>
      <Scroll/>
      <Stacks/>
+     <Certificates/>
      <ProjectIntro/>
      <Projects/>
      <Contact/>

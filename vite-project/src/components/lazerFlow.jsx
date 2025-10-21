@@ -113,7 +113,7 @@ export default function LaserFlowBoxExample() {
           }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          Give Your Valueable Suggestion 
+          Give Your Valuable Suggestion 
         </motion.h2>
 
         <AnimatePresence mode="wait">

@@ -21,10 +21,12 @@ export default function Hero() {
             { label: "Home", href: "#hero" },
             { label: "Stacks", href: "#stacks" },
             { label: "Projects", href: "#projects" },
+            { label: "Certificates", href: "#certificates" },
           ]
         : [
             { label: "Home", href: "#hero" },
             { label: "Stacks", href: "#stacks" },
+            { label: "Certificates", href: "#certificates" },
             { label: "Projects", href: "#projects" },
             { label: "Contact", href: "#contact" },
             { label: "Suggestion", href: "#suggestion" },
