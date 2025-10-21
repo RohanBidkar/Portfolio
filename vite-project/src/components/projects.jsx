@@ -141,12 +141,12 @@ const Projects = () => {
     {
       id: 1,
       title: " Google Gemini ChatBot",
-      description: "A clean and responsive AI chatbot web app built with React that connects to the Google Gemini API to provide intelligent, real-time answers to your questions",
+      description: "A clean and responsive AI chatbot web app built with React that connects to the Google Gemini API to provide intelligent, real-time answers to your questions",
       tech: ["Vite", "React", "Geamini API"],
       images: [
-        "/src/assets/projects/gemini1.png",
-        "/src/assets/projects/gemini2.png",
-        "/src/assets/projects/gemini3.png"
+        new URL('../assets/projects/gemini1.png', import.meta.url).href,
+        new URL('../assets/projects/gemini2.png', import.meta.url).href,
+        new URL('../assets/projects/gemini3.png', import.meta.url).href
       ],
       link: "https://gemini-clone-1-jzou.onrender.com/",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
@@ -157,10 +157,10 @@ const Projects = () => {
       description: "A fast, responsive, and user-friendly shopping platform powered by React. Enjoy dynamic product listings, seamless navigation, mobile-optimized design, secure checkout, and a scalable architecture — all crafted to deliver a smooth and engaging online shopping experience.",
       tech: ["React", "Node.js", "MongoDB", "JWT"],
       images: [
-        "/src/assets/projects/ecom1.png",
-        "/src/assets/projects/ecom2.png",
-        "/src/assets/projects/ecom3.png",
-        "/src/assets/projects/ecom4.png",
+        new URL('../assets/projects/ecom1.png', import.meta.url).href,
+        new URL('../assets/projects/ecom2.png', import.meta.url).href,
+        new URL('../assets/projects/ecom3.png', import.meta.url).href,
+        new URL('../assets/projects/ecom4.png', import.meta.url).href
       ],
       link: "https://shopease-ecommerce-mof2.onrender.com/",
       gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"
@@ -171,10 +171,10 @@ const Projects = () => {
       description: "Next Gen Trading Platform inspired by Zerodha -Experience lightning-fast order execution, intuitive charting tools, and a clean, clutter-free interface.",
       tech: ["MongoDB", "Cors", "Express", "React", "Passport","React-Router"],
       images: [
-        "/src/assets/projects/zerodha1.png",
-        "/src/assets/projects/zerodha2.png",
-        "/src/assets/projects/zerodha3.png",
-        "/src/assets/projects/zerodha4.png",
+        new URL('../assets/projects/zerodha1.png', import.meta.url).href,
+        new URL('../assets/projects/zerodha2.png', import.meta.url).href,
+        new URL('../assets/projects/zerodha3.png', import.meta.url).href,
+        new URL('../assets/projects/zerodha4.png', import.meta.url).href
       ],
       link: "https://zerodha-1-b2nt.onrender.com/",
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)"

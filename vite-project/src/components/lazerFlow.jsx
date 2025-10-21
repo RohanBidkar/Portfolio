@@ -139,28 +139,23 @@ export default function LaserFlowBoxExample() {
                 setSubmitted(true);
               }}
             >
-              <motion.input
+              <input
                 type="text"
                 name="suggestion"
                 value={suggestion}
                 onChange={(e) => setSuggestion(e.target.value)}
-                placeholder="Your Suggestion..."
+                placeholder="Your suggestion..."
                 required
                 style={{
                   width: '100%',
-                  padding: '20px',
-                  fontSize: '1.2rem',
-                  borderRadius: '15px',
-                  border: '2px solid #8b5cf6',
-                  backgroundColor: 'rgba(139, 92, 246, 0.1)',
-                  color: 'white',
+                  padding: '18px 24px',
+                  fontSize: '1.1rem',
+                  borderRadius: '25px',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  color: 'rgba(255, 255, 255, 0.9)',
                   outline: 'none',
                   transition: 'all 0.3s ease'
-                }}
-                whileFocus={{
-                  scale: 1.02,
-                  borderColor: '#ec4899',
-                  boxShadow: '0 0 30px rgba(236, 72, 153, 0.5)'
                 }}
               />
               
@@ -171,23 +166,24 @@ export default function LaserFlowBoxExample() {
               <motion.button
                 type="submit"
                 style={{
-                  padding: '18px 40px',
-                  fontSize: '1.3rem',
-                  fontWeight: 700,
+                  padding: '16px 40px',
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
                   borderRadius: '50px',
-                  border: '2px solid #8b5cf6',
-                  background: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
-                  color: 'white',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  color: 'rgba(255, 255, 255, 0.8)',
                   cursor: 'pointer',
-                  position: 'relative',
-                  overflow: 'hidden'
+                  transition: 'all 0.3s ease'
                 }}
-                whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(139, 92, 246, 0.8)' }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ 
+                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                  color: 'rgba(255, 255, 255, 1)',
+                  scale: 1.02
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                
-                Submit 
-                
+                Submit →
               </motion.button>
             </motion.form>
           ) : (
@@ -203,7 +199,7 @@ export default function LaserFlowBoxExample() {
                 gap: '20px'
               }}
             >
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 360]
@@ -212,7 +208,7 @@ export default function LaserFlowBoxExample() {
                 style={{ fontSize: '5rem' }}
               >
                 🎉
-              </motion.div>
+              </motion.div> */}
               <motion.h3
                 style={{
                   fontSize: '2rem',
