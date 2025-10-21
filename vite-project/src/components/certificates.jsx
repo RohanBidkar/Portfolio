@@ -1,28 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './certificates.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import devlopmentCert from '../assets/socials/devlopment.jpg';
+import dsaCert from '../assets/socials/dsa.jpg';
 
 const Certificates = () => {
+    const [selectedCert, setSelectedCert] = useState(null);
+
     const certificates = [
         {
             id: 1,
-            title: "Certificate Title 1",
-            issuer: "Issuing Organization",
-            date: "Month Year",
-            description: "Brief description of what this certification covers",
-            credentialId: "ABC123XYZ",
-            link: "#" // Add your certificate link here
+            title: " Delta (Full Stack Web Development)",
+            issuer: "Apna Collage",
+            date: "OCT 2025",
+            description: "Complete MERN Stack Frontend & React , Backend & Database",
+            credentialId: "68ded18f1582459f1b02d686",
+            image: devlopmentCert
         },
         {
             id: 2,
-            title: "Certificate Title 2",
-            issuer: "Issuing Organization",
-            date: "Month Year",
-            description: "Brief description of what this certification covers",
-            credentialId: "XYZ789ABC",
-            link: "#" // Add your certificate link here
+            title: " Alpha (DSA with Java).",
+            issuer: "Apna Collage",
+            date: "OCT 2025",
+            description: " Arrays,Stacks,Trees,DP,Graphs etc.",
+            credentialId: "68e8005e10614ff1a407d256",
+            image: dsaCert
         }
     ];
+
+    const openModal = (cert) => {
+        console.log('Opening modal for:', cert.title);
+        setSelectedCert(cert);
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
+
+    const closeModal = () => {
+        console.log('Closing modal');
+        setSelectedCert(null);
+        document.body.style.overflow = 'unset'; // Restore scrolling
+    };
 
     return (
         <div className="certificates-wrapper" id="certificates">
@@ -92,19 +108,58 @@ const Certificates = () => {
                                 <p className="cert-id">Credential ID: {cert.credentialId}</p>
                             </div>
 
-                            <a 
-                                href={cert.link} 
+                            <button 
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    openModal(cert);
+                                }}
                                 className="cert-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                type="button"
+                                style={{ position: 'relative', zIndex: 10 }}
                             >
                                 View Certificate
                                 <span className="arrow">→</span>
-                            </a>
+                            </button>
                         </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Certificate Modal */}
+            <AnimatePresence>
+                {selectedCert && (
+                    <motion.div 
+                        className="cert-modal-overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closeModal}
+                    >
+                        <motion.div 
+                            className="cert-modal-content"
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ type: "spring", duration: 0.5 }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button className="cert-modal-close" onClick={closeModal}>
+                                ✕
+                            </button>
+                            <img 
+                                src={selectedCert.image} 
+                                alt={selectedCert.title}
+                                className="cert-modal-image"
+                            />
+                            <div className="cert-modal-info">
+                                <h3>{selectedCert.title}</h3>
+                                <p>{selectedCert.issuer}</p>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
