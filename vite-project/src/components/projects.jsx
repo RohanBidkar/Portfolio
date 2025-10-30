@@ -139,7 +139,7 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   const projects = [
     {
-      id: 1,
+      id: 4,
       title: " Google Gemini ChatBot",
       description: "A clean and responsive AI chatbot web app built with React that connects to the Google Gemini API to provide intelligent, real-time answers to your questions",
       tech: ["Vite", "React", "Geamini API"],
@@ -152,7 +152,7 @@ const Projects = () => {
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
-      id: 2,
+      id: 3,
       title: "Ecommerce Site",
       description: "A fast, responsive, and user-friendly shopping platform powered by React. Enjoy dynamic product listings, seamless navigation, mobile-optimized design, secure checkout, and a scalable architecture — all crafted to deliver a smooth and engaging online shopping experience.",
       tech: ["React", "Node.js", "MongoDB", "JWT"],
@@ -166,7 +166,7 @@ const Projects = () => {
       gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"
     },
     {
-      id: 3,
+      id: 1,
       title: "Zerodha Clone Web App",
       description: "Next Gen Trading Platform inspired by Zerodha -Experience lightning-fast order execution, intuitive charting tools, and a clean, clutter-free interface.",
       tech: ["MongoDB", "Cors", "Express", "React", "Passport","React-Router"],
@@ -175,6 +175,19 @@ const Projects = () => {
         new URL('../assets/projects/zerodha2.png', import.meta.url).href,
         new URL('../assets/projects/zerodha3.png', import.meta.url).href,
         new URL('../assets/projects/zerodha4.png', import.meta.url).href
+      ],
+      link: "https://zerodha-1-b2nt.onrender.com/",
+      gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)"
+    },
+    {
+      id: 2,
+      title: "Instatalk - Real time chat app ",
+      description: "I have built InstaTalk — a full‑stack real‑time chat app offering both P2P and room for chatting based on React + Vite, Node/Express, Socket.io for WebSocket, MongoDB/Mongoose for persistent storage, and JWT/bcrypt for auth. Production-ready build and deployment automated via Render , ideal demo of real-time systems and secure API design.",
+      tech: ["Socket.io", "MongoDB", "Cors", "Express", "React", ],
+      images: [
+        new URL('../assets/projects/instatalk1.png', import.meta.url).href,
+        new URL('../assets/projects/instatalk2.png', import.meta.url).href,
+        new URL('../assets/projects/instatalk3.png', import.meta.url).href
       ],
       link: "https://zerodha-1-b2nt.onrender.com/",
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)"
