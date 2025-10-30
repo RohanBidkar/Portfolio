@@ -152,7 +152,7 @@ const Projects = () => {
         new URL('../assets/projects/zerodha4.png', import.meta.url).href
       ],
       link: "https://zerodha-1-b2nt.onrender.com/",
-      gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)"
+      gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"
     },
     {
       id: 2,
