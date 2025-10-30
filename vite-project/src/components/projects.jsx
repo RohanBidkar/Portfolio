@@ -138,33 +138,8 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   const projects = [
-    {
-      id: 4,
-      title: " Google Gemini ChatBot",
-      description: "A clean and responsive AI chatbot web app built with React that connects to the Google Gemini API to provide intelligent, real-time answers to your questions",
-      tech: ["Vite", "React", "Geamini API"],
-      images: [
-        new URL('../assets/projects/gemini1.png', import.meta.url).href,
-        new URL('../assets/projects/gemini2.png', import.meta.url).href,
-        new URL('../assets/projects/gemini3.png', import.meta.url).href
-      ],
-      link: "https://gemini-clone-1-jzou.onrender.com/",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-    },
-    {
-      id: 3,
-      title: "Ecommerce Site",
-      description: "A fast, responsive, and user-friendly shopping platform powered by React. Enjoy dynamic product listings, seamless navigation, mobile-optimized design, secure checkout, and a scalable architecture — all crafted to deliver a smooth and engaging online shopping experience.",
-      tech: ["React", "Node.js", "MongoDB", "JWT"],
-      images: [
-        new URL('../assets/projects/ecom1.png', import.meta.url).href,
-        new URL('../assets/projects/ecom2.png', import.meta.url).href,
-        new URL('../assets/projects/ecom3.png', import.meta.url).href,
-        new URL('../assets/projects/ecom4.png', import.meta.url).href
-      ],
-      link: "https://shopease-ecommerce-mof2.onrender.com/",
-      gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"
-    },
+    
+    
     {
       id: 1,
       title: "Zerodha Clone Web App",
@@ -191,7 +166,34 @@ const Projects = () => {
       ],
       link: "https://zerodha-1-b2nt.onrender.com/",
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)"
-    }
+    },
+    {
+      id: 3,
+      title: "Ecommerce Site",
+      description: "A fast, responsive, and user-friendly shopping platform powered by React. Enjoy dynamic product listings, seamless navigation, mobile-optimized design, secure checkout, and a scalable architecture — all crafted to deliver a smooth and engaging online shopping experience.",
+      tech: ["React", "Node.js", "MongoDB", "JWT"],
+      images: [
+        new URL('../assets/projects/ecom1.png', import.meta.url).href,
+        new URL('../assets/projects/ecom2.png', import.meta.url).href,
+        new URL('../assets/projects/ecom3.png', import.meta.url).href,
+        new URL('../assets/projects/ecom4.png', import.meta.url).href
+      ],
+      link: "https://shopease-ecommerce-mof2.onrender.com/",
+      gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"
+    },
+    {
+      id: 4,
+      title: " Google Gemini ChatBot",
+      description: "A clean and responsive AI chatbot web app built with React that connects to the Google Gemini API to provide intelligent, real-time answers to your questions",
+      tech: ["Vite", "React", "Geamini API"],
+      images: [
+        new URL('../assets/projects/gemini1.png', import.meta.url).href,
+        new URL('../assets/projects/gemini2.png', import.meta.url).href,
+        new URL('../assets/projects/gemini3.png', import.meta.url).href
+      ],
+      link: "https://gemini-clone-1-jzou.onrender.com/",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    },
   ];
 
   return (
