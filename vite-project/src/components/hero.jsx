@@ -95,7 +95,8 @@ export default function Hero() {
 
                 <div className='robot-container'>
                     <div className='robot'>
-                        <Spline scene="https://prod.spline.design/mMkJsqndhdePJxv5/scene.splinecode" />
+                        {/* <Spline scene="https://prod.spline.design/mMkJsqndhdePJxv5/scene.splinecode" /> */}
+                        <Spline scene="https://prod.spline.design/vRBYHq5G1Hgg9HKS/scene.splinecode" />
                     </div>
                 </div>
 
