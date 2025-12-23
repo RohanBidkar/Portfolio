@@ -114,11 +114,11 @@ export default function Hero() {
                             </div>
                             <h1>I am <br /> Rohan Bidkar</h1>
                             <h3>
-                                <AnimatedText text="I'm a passionate web developer skilled in the MERN stack." />
+                                <AnimatedText text="I'm a passionate web developer skilled in the (GenAI+MERN) stack." />
                                 <br />
                                 <AnimatedText text="I love turning ideas into fast, user-friendly digital experiences." />
                                 <br />
-                                <AnimatedText text="Currently exploring React and DSA." />
+                                <AnimatedText text="Currently exploring LangChain and DSA." />
                             </h3>
                         </div>
                     </ElectricBorder>

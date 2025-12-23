@@ -5,7 +5,7 @@ export default function Scroll() {
         <div style={{ position: 'relative', height: 'auto', width: '100%', minHeight: '100vh', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black', overflow: 'hidden' }}>
             <FallingText
                 text={`Passionate about crafting efficient and secure web applications using cutting-edge technologies. Here's an overview of my technical skill set, organized by development focus areas . Check out my Stacks below .
-                    Before Scrolling Click Me!`
+                    `
                 }
                 highlightWords={["Passionate", "efficient", "secure", "skill", "set", "development","Stacks","Click","Me"]}
                 highlightClass="highlighted"

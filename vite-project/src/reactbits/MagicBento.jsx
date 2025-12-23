@@ -29,7 +29,7 @@ const cardData = [
     color: '#060010',
     title: '',
     description: ' ',
-    label: 'Backend Development            => Node.js, Express.js, MongoDB, PostgreSQL, MySQL, REST APIs, GraphQL'
+    label: 'Backend Development            => FastAPI, LangChain, FAISS,RAG,   Node.js, Express.js, MongoDB, PostgreSQL, MySQL, REST APIs, GraphQL'
   },
   {
     color: '#060010',
